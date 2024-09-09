@@ -6,11 +6,16 @@ import { AnimatedAddToBagButton } from './AnimatedAddToBagButton';
 
 const ProductDetails: React.FC = () => {
   const [selectedColor, setSelectedColor] = useState<string>('washed-black');
+  const [selectedSize, setSelectedSize] = useState<string>(''); // State for selected size
 
   const colors = ['washed-black', 'ecru', 'blue']; // Define your color options
 
   const handleColorChange = (color: string) => {
     setSelectedColor(color);
+  };
+
+  const handleSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedSize(event.target.value); // Update selected size
   };
 
   return (
@@ -35,8 +40,12 @@ const ProductDetails: React.FC = () => {
 
       <p className="text-black mb-4">Selected Color: {selectedColor}</p> {/* Add margin-bottom for spacing */}
       
-      {/* Existing Size Dropdown */}
-      <select className="relative w-full bg-white text-black p-[10px] rounded-md outline outline-1 outline-black mb-4 cursor-pointer"> {/* Add margin-bottom for spacing */}
+      {/* Size Dropdown */}
+      <select
+        className="relative w-full bg-white text-black p-[10px] rounded-md outline outline-1 outline-black mb-4 cursor-pointer"
+        value={selectedSize} // Set the value prop
+        onChange={handleSizeChange} // Handle size change
+      >
         <option value="" disabled selected>Select Size</option>
         <option value="S">S</option>
         <option value="M">M</option>

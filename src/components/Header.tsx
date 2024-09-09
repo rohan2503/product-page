@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       </nav>
       <div className="text-center">
         <h1 className="text-2xl font-serif">Maison Margiela</h1>
-        <p className="text-xs">PARIS</p>
+        <p className="text-xs">Paris</p>
       </div>
       <div className="flex space-x-4">
         <NavItem href="/search">Search</NavItem>
