@@ -81,18 +81,20 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%; /* Ensure it takes full width */
+  max-width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  flex-direction: column; /* Ensures text and image stack vertically */
 }
 
 .main-image {
-  max-width: 80%; /* Adjust size of the main image */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
-.thumbnail {
-  width: 80px; /* Adjust thumbnail size */
-  height: auto; /* Maintain aspect ratio */
-}
+
+
 
 /* Additional spacing adjustments */
 .container {
@@ -114,6 +116,7 @@ button {
 .product-details {
   font-size: 14px; /* Adjust font size for product details */
   overflow: visible; /* Ensure it doesn't get cut off */
+  margin-top: 20px; /* Adjust margin to align with the main image */
 }
 
 .container {
@@ -126,6 +129,15 @@ button {
 }
 
 .thumbnail {
-  width: 60px;
-  height: 60px;
+  width: 40px; /* Set the desired width */
+  height: 40px; /* Set the desired height */
+  border-radius: 8px; /* Optional: for rounded corners */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin-bottom: 8px; /* Space between thumbnails */
 }
+
+.header-logo {
+  text-align: center;
+  margin-bottom: 20px; /* Optional: Adds space between logo and image */
+}
+

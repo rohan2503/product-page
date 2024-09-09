@@ -1,23 +1,42 @@
-import React from 'react';
+"use client"; // Add this line
+
+import React, { useState } from 'react';
+import ColorButton from './ColorButton';
 import { AnimatedAddToBagButton } from './AnimatedAddToBagButton';
 
 const ProductDetails: React.FC = () => {
+  const [selectedColor, setSelectedColor] = useState<string>('washed-black');
+
+  const colors = ['washed-black', 'ecru', 'blue']; // Define your color options
+
+  const handleColorChange = (color: string) => {
+    setSelectedColor(color);
+  };
+
   return (
     <div className="w-1/3 pl-8 text-sm">
       <p className="text-sm mb-2 text-gray-600">T-SHIRTS</p>
       <h2 className="text-3xl font-serif mb-2 text-black">Distorted logo T-shirt</h2>
       <p className="text-xl mb-4 text-black">$ 495</p>
-      <div className="flex space-x-2 mb-4">
-        <span className="w-6 h-6 rounded-full bg-beige border"></span>
-        <span className="w-6 h-6 rounded-full bg-navy border"></span>
-        <span className="w-6 h-6 rounded-full bg-black border-2 border-blue-500"></span>
-        <span className="w-6 h-6 rounded-full bg-white border"></span>
-      </div>
-      <p className="mb-2 text-black">Washed Black</p>
-      <p className="text-sm underline mb-4 text-black">Size Guide</p>
       
-      {/* Size Dropdown */}
-      <select className="relative w-full bg-white text-black p-[10px] rounded-md outline outline-1 outline-black mb-2 cursor-pointer">
+      {/* Color Selection Section */}
+      <div className="mb-4 flex items-center"> {/* Use flex to align items */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
+          {colors.map((color) => (
+            <ColorButton
+              key={color}
+              color={color} // Pass the color directly
+              onClick={handleColorChange}
+              isSelected={selectedColor === color}
+            />
+          ))}
+        </div>
+      </div>
+
+      <p className="text-black mb-4">Selected Color: {selectedColor}</p> {/* Add margin-bottom for spacing */}
+      
+      {/* Existing Size Dropdown */}
+      <select className="relative w-full bg-white text-black p-[10px] rounded-md outline outline-1 outline-black mb-4 cursor-pointer"> {/* Add margin-bottom for spacing */}
         <option value="" disabled selected>Select Size</option>
         <option value="S">S</option>
         <option value="M">M</option>
@@ -26,13 +45,14 @@ const ProductDetails: React.FC = () => {
       </select>
 
       {/* Animated Add to Bag Button */}
-      <AnimatedAddToBagButton initialText="Add to Bag" addedText="Added to Bag" />
+      <AnimatedAddToBagButton initialText="Add to Bag" addedText="Added to Bag" className="mb-2" /> {/* Add margin-bottom for spacing */}
 
       {/* Pick-up Button */}
-      <button className="relative flex w-full items-center justify-center overflow-hidden rounded-md bg-white text-black p-[10px] outline outline-1 outline-black mt-2">
+      <button className="relative flex w-full items-center justify-center overflow-hidden rounded-md bg-white text-black p-[10px] outline outline-1 outline-black mb-4 mt-2"> {/* Add margin-top for spacing */}
         <span className="relative block h-full w-full font-semibold">Pick-up in Boutique</span>
       </button>
 
+      {/* Existing Product Description */}
       <p className="text-sm mb-4 text-gray-600">
         Regular-fit, crew-neck T-shirt in Makò jersey with the Maison Margiela distorted logo.
       </p>
