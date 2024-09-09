@@ -28,8 +28,8 @@ const ImageGallery: React.FC = () => {
           >
             <Image 
               src={src} 
-              width={80} 
-              height={80} 
+              width={60} 
+              height={60} 
               alt={`Product view ${index + 1}`} 
               className="w-full h-auto object-cover"
             />
@@ -39,14 +39,14 @@ const ImageGallery: React.FC = () => {
       
       {/* Main image */}
       <div className="w-5/6">
-        <div className="rounded-3xl overflow-hidden shadow-lg">
-          <Image 
-            src={selectedImage} 
-            width={600} 
-            height={600} 
-            alt="Main product view" 
-            className="w-full h-auto object-cover"
-          />
+        <div className="rounded-3xl overflow-hidden shadow-lg max-w-md mx-auto">
+            <Image 
+                src={selectedImage} 
+                width={400} 
+                height={400}        
+                alt="Main product view" 
+                className="w-full h-auto object-cover"
+            />
         </div>
       </div>
     </div>

@@ -69,3 +69,63 @@ select {
 .image-gallery img {
   margin-bottom: 10px; /* Space between thumbnails */
 }
+
+/* Add this to your CSS file */
+.bg-ecru {
+  background-color: #f5f5dc; /* Example color for ecru */
+}
+
+/* Add this to your CSS file */
+/* Add this to your CSS file */
+.main-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; /* Ensure it takes full width */
+}
+
+.main-image {
+  max-width: 80%; /* Adjust size of the main image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.thumbnail {
+  width: 80px; /* Adjust thumbnail size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional spacing adjustments */
+.container {
+  display: flex;
+  justify-content: center; /* Center the entire content */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.flex {
+  gap: 20px; /* Space between columns */
+}
+
+/* Button and text size adjustments */
+button {
+  padding: 10px 20px; /* Adjust button size */
+  font-size: 14px; /* Adjust font size */
+}
+
+.product-details {
+  font-size: 14px; /* Adjust font size for product details */
+  overflow: visible; /* Ensure it doesn't get cut off */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-details {
+  font-size: 14px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+}

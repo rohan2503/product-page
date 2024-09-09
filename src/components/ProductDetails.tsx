@@ -3,7 +3,7 @@ import { AnimatedAddToBagButton } from './AnimatedAddToBagButton';
 
 const ProductDetails: React.FC = () => {
   return (
-    <div className="w-1/3 pl-8">
+    <div className="w-1/3 pl-8 text-sm">
       <p className="text-sm mb-2 text-gray-600">T-SHIRTS</p>
       <h2 className="text-3xl font-serif mb-2 text-black">Distorted logo T-shirt</h2>
       <p className="text-xl mb-4 text-black">$ 495</p>
