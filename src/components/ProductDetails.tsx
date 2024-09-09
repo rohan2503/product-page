@@ -54,7 +54,7 @@ const ProductDetails: React.FC = () => {
       </select>
 
       {/* Animated Add to Bag Button */}
-      <AnimatedAddToBagButton initialText="Add to Bag" addedText="Added to Bag" className="mb-2" /> {/* Add margin-bottom for spacing */}
+      <AnimatedAddToBagButton initialText="Add to Bag" addedText="Added to Bag" /> {/* Removed className */}
 
       {/* Pick-up Button */}
       <button className="relative flex w-full items-center justify-center overflow-hidden rounded-md bg-white text-black p-[10px] outline outline-1 outline-black mb-4 mt-2"> {/* Add margin-top for spacing */}
