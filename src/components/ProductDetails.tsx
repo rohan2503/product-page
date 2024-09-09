@@ -8,7 +8,7 @@ const ProductDetails: React.FC = () => {
   const [selectedColor, setSelectedColor] = useState<string>('washed-black');
   const [selectedSize, setSelectedSize] = useState<string>(''); // State for selected size
 
-  const colors = ['washed-black', 'ecru', '#003366']; // Change blue to a darker shade
+  const colors = ['beige', 'black']; // Change blue to a darker shade
 
   const handleColorChange = (color: string) => {
     setSelectedColor(color);
