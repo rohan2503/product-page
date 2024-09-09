@@ -46,7 +46,7 @@ const ProductDetails: React.FC = () => {
         value={selectedSize} // Set the value prop
         onChange={handleSizeChange} // Handle size change
       >
-        <option value="" disabled selected>Select Size</option>
+        <option value="" disabled>Select Size</option>
         <option value="S">S</option>
         <option value="M">M</option>
         <option value="L">L</option>
